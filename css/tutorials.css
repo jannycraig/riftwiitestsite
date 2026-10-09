@@ -12,7 +12,9 @@ html,
 body {
     margin: 0;
     min-height: 100%;
+    scroll-behavior: smooth;
 }
+
 
 body {
     padding: 48px 24px;
@@ -256,4 +258,154 @@ code {
 
     font-size: 0.72rem;
     letter-spacing: 0.22em;
+}
+
+
+.download-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 22px;
+    min-height: 44px;
+    padding: 10px 16px;
+    border-radius: 12px;
+    color: #eafdff;
+    text-decoration: none;
+    border: 1px solid rgba(98, 217, 255, 0.25);
+    background:
+        linear-gradient(
+            90deg,
+            rgba(59, 211, 255, 0.13),
+            rgba(154, 79, 255, 0.16)
+        );
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.release-button {
+    width: 100%;
+    margin-top: 20px;
+}
+
+
+.link-button {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+
+    min-height: 44px;
+    padding: 10px 16px;
+
+    border: 1px solid rgba(98, 217, 255, 0.25);
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(59, 211, 255, 0.13),
+            rgba(154, 79, 255, 0.16)
+        );
+
+    color: #eafdff;
+
+    font-family: "Rounded", sans-serif;
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.link-button:hover,
+.link-button:focus-visible {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    transform: translateY(-2px);
+
+    border-color:
+        rgba(126, 229, 255, 0.52);
+
+    box-shadow:
+        0 0 18px rgba(70, 215, 255, 0.12),
+        0 0 28px rgba(157, 76, 255, 0.08);
+
+    outline: none;
+}
+
+
+
+.download-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 22px;
+    min-height: 44px;
+    padding: 10px 16px;
+
+    border-radius: 12px;
+
+    color: #eafdff;
+    text-decoration: none;
+
+    border: 1px solid rgba(98, 217, 255, 0.25);
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(59, 211, 255, 0.13),
+            rgba(154, 79, 255, 0.16)
+        );
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.download-button:hover,
+.download-button:focus-visible {
+    transform: translateY(-2px);
+
+    border-color: rgba(126, 229, 255, 0.52);
+
+    box-shadow:
+        0 0 18px rgba(70, 215, 255, 0.12),
+        0 0 28px rgba(157, 76, 255, 0.08);
+
+    outline: none;
+}
+
+
+.tutorial-video {
+    display: block;
+
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    object-fit: cover;
+
+    margin:
+        18px 0 22px;
+
+    border-radius: 16px;
+
+    border:
+        1px solid
+        rgba(120, 211, 255, 0.18);
+
+    box-shadow:
+        0 0 28px
+            rgba(65, 206, 255, 0.08),
+        0 0 42px
+            rgba(152, 76, 255, 0.05);
+
+    background: #000;
 }
