@@ -14,10 +14,7 @@ dia.png
 mc
 
 
-# idk u said you had another person u wanted 2 add
-add their pfp to resources/img/contributors
-blank.png
-mc
+
 
 <!--writing mc under will show the user when the list is condensed-->
 
