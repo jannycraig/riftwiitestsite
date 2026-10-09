@@ -1672,3 +1672,44 @@ if (creditsToggle) {
 
 
 loadCreditsMarkdown();
+
+const motionToggle = document.getElementById("motionToggle");
+
+function updateMotionToggle() {
+    if (!motionToggle) {
+        return;
+    }
+
+    const reduced =
+        document.body.classList.contains("reduced-motion");
+
+    motionToggle.textContent = reduced
+        ? "Animations: Off"
+        : "Animations: On";
+
+    motionToggle.setAttribute(
+        "aria-pressed",
+        reduced ? "true" : "false"
+    );
+}
+
+function setReducedMotion(enabled) {
+    document.body.classList.toggle(
+        "reduced-motion",
+        enabled
+    );
+
+    updateMotionToggle();
+}
+
+document.body.classList.remove("reduced-motion");
+updateMotionToggle();
+
+if (motionToggle) {
+    motionToggle.addEventListener("click", () => {
+        const reduced =
+            document.body.classList.contains("reduced-motion");
+
+        setReducedMotion(!reduced);
+    });
+}
