@@ -465,7 +465,336 @@ body.loaded .welcome {
         transform: translateY(-6px);
     }
 }
+.social-embed-grid {
+    width: 100%;
 
+    margin-top: 26px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+
+.discord-invite,
+.github-invite {
+    width: 100%;
+    min-width: 0;
+
+    padding:
+        38px
+        40px
+        40px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    border-radius: 14px;
+
+    background: #242428;
+
+    box-shadow:
+        0 18px 48px
+            rgba(
+                0,
+                0,
+                25,
+                0.28
+            ),
+        0 0 30px
+            rgba(
+                85,
+                76,
+                255,
+                0.06
+            );
+}
+
+
+.discord-server-icon {
+    width: 82px;
+    height: 82px;
+
+    margin-bottom: 17px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 22px;
+
+    overflow: hidden;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 5px 15px
+            rgba(
+                0,
+                0,
+                0,
+                0.25
+            );
+}
+
+
+.discord-server-icon img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+.github-repo-icon {
+    width: 82px;
+    height: 82px;
+
+    margin-bottom: 17px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 22px;
+
+    overflow: hidden;
+
+    background: #0d1117;
+
+    box-shadow:
+        0 5px 15px
+            rgba(
+                0,
+                0,
+                0,
+                0.25
+            );
+}
+
+
+.github-repo-icon img {
+    display: block;
+
+    width: 52px;
+    height: 52px;
+
+    object-fit: contain;
+}
+
+
+.discord-invite-text,
+.github-invite-text {
+    margin:
+        0
+        0
+        10px
+        !important;
+
+    color:
+        #d6d6db
+        !important;
+
+    font-family:
+        Arial,
+        sans-serif
+        !important;
+
+    font-size:
+        1.05rem
+        !important;
+
+    line-height:
+        1.4
+        !important;
+}
+
+
+.discord-server-name,
+.github-repo-name {
+    margin:
+        0
+        0
+        28px;
+
+    color: #ffffff;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size:
+        clamp(
+            1.35rem,
+            2.5vw,
+            2rem
+        );
+
+    font-weight: 700;
+
+    overflow-wrap: anywhere;
+}
+
+
+.discord-join-button,
+.github-repo-button {
+    width: 100%;
+
+    min-height: 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding:
+        12px
+        22px;
+
+    border-radius: 9px;
+
+    color: #ffffff;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 1rem;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 5px 16px
+            rgba(
+                0,
+                0,
+                0,
+                0.18
+            );
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.discord-join-button {
+    background: #5865f2;
+}
+
+
+.github-repo-button {
+    background: #2f3338;
+
+    border:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.12
+        );
+}
+
+
+.discord-join-button:hover,
+.discord-join-button:focus-visible {
+    background: #6875f5;
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 8px 20px
+            rgba(
+                0,
+                0,
+                0,
+                0.24
+            );
+
+    outline: none;
+}
+
+
+.github-repo-button:hover,
+.github-repo-button:focus-visible {
+    background: #3a3f45;
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 8px 20px
+            rgba(
+                0,
+                0,
+                0,
+                0.24
+            );
+
+    outline: none;
+}
+
+
+.discord-join-button:active,
+.github-repo-button:active {
+    transform:
+        translateY(0);
+}
+
+
+@media (max-width: 760px) {
+
+    .social-embed-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .discord-invite,
+    .github-invite {
+        padding:
+            30px
+            22px;
+    }
+
+    .discord-server-icon,
+    .github-repo-icon {
+        width: 72px;
+        height: 72px;
+    }
+
+    .github-repo-icon img {
+        width: 44px;
+        height: 44px;
+    }
+
+}
 .tbar {
     position: fixed;
     left: 22px;
@@ -1955,15 +2284,37 @@ body.mouse-down * {
 
 
 
-.discord-invite {
-    width: min(600px, 100%);
+.social-embed-grid {
+    width: 100%;
 
-    margin: 26px auto 0;
-    padding: 38px 40px 40px;
+    margin-top: 26px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+
+.discord-invite,
+.github-invite {
+    width: 100%;
+    min-width: 0;
+
+    padding:
+        38px
+        40px
+        40px;
 
     display: flex;
+
     flex-direction: column;
+
     align-items: center;
+
+    justify-content: center;
 
     text-align: center;
 
@@ -1972,15 +2323,34 @@ body.mouse-down * {
     background: #242428;
 
     box-shadow:
-        0 18px 48px rgba(0, 0, 25, 0.28),
-        0 0 30px rgba(85, 76, 255, 0.06);
+        0 18px 48px
+            rgba(
+                0,
+                0,
+                25,
+                0.28
+            ),
+        0 0 30px
+            rgba(
+                85,
+                76,
+                255,
+                0.06
+            );
 }
+
 
 .discord-server-icon {
     width: 82px;
     height: 82px;
 
     margin-bottom: 17px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
 
     border-radius: 22px;
 
@@ -1989,8 +2359,15 @@ body.mouse-down * {
     background: #ffffff;
 
     box-shadow:
-        0 5px 15px rgba(0, 0, 0, 0.25);
+        0 5px 15px
+            rgba(
+                0,
+                0,
+                0,
+                0.25
+            );
 }
+
 
 .discord-server-icon img {
     display: block;
@@ -2001,52 +2378,130 @@ body.mouse-down * {
     object-fit: cover;
 }
 
-.discord-invite-text {
-    margin: 0 0 10px !important;
 
-    color: #d6d6db !important;
+.github-repo-icon {
+    width: 82px;
+    height: 82px;
 
-    font-family: Arial, sans-serif !important;
-    font-size: 1.05rem !important;
-
-    line-height: 1.4 !important;
-}
-
-.discord-server-name {
-    margin: 0 0 28px;
-
-    color: #ffffff;
-
-    font-family: Arial, sans-serif;
-    font-size: clamp(1.6rem, 3vw, 2rem);
-    font-weight: 700;
-}
-
-.discord-join-button {
-    width: 100%;
-
-    min-height: 50px;
+    margin-bottom: 17px;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    padding: 12px 22px;
+    border-radius: 22px;
+
+    overflow: hidden;
+
+    background: #0d1117;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+.github-repo-icon img {
+    display: block;
+
+    width: 52px;
+    height: 52px;
+
+    object-fit: contain;
+}
+
+
+
+.discord-invite-text,
+.github-invite-text {
+    margin:
+        0
+        0
+        10px
+        !important;
+
+    color:
+        #d6d6db
+        !important;
+
+    font-family:
+        Arial,
+        sans-serif
+        !important;
+
+    font-size:
+        1.05rem
+        !important;
+
+    line-height:
+        1.4
+        !important;
+}
+
+
+.discord-server-name,
+.github-repo-name {
+    margin:
+        0
+        0
+        28px;
+
+    color:
+        #ffffff;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size:
+        clamp(
+            1.35rem,
+            2.5vw,
+            2rem
+        );
+
+    font-weight: 700;
+
+    overflow-wrap: anywhere;
+}
+
+
+.discord-join-button,
+.github-repo-button {
+    width: 100%;
+
+    min-height: 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding:
+        12px
+        22px;
 
     border-radius: 9px;
 
-    background: #5865f2;
-
     color: #ffffff;
 
-    font-family: Arial, sans-serif;
+    font-family:
+        Arial,
+        sans-serif;
+
     font-size: 1rem;
+
     font-weight: 600;
 
     text-decoration: none;
 
     box-shadow:
-        0 5px 16px rgba(0, 0, 0, 0.18);
+        0 5px 16px
+            rgba(
+                0,
+                0,
+                0,
+                0.18
+            );
 
     transition:
         background 0.2s ease,
@@ -2054,31 +2509,103 @@ body.mouse-down * {
         box-shadow 0.2s ease;
 }
 
+
+.discord-join-button {
+    background: #5865f2;
+}
+
+
+.github-repo-button {
+    background: #2f3338;
+
+    border:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.12
+        );
+}
+
+
 .discord-join-button:hover,
 .discord-join-button:focus-visible {
     background: #6875f5;
 
-    transform: translateY(-2px);
+    transform:
+        translateY(-2px);
 
     box-shadow:
-        0 8px 20px rgba(0, 0, 0, 0.24);
+        0 8px 20px
+            rgba(
+                0,
+                0,
+                0,
+                0.24
+            );
 
     outline: none;
 }
 
-.discord-join-button:active {
-    transform: translateY(0);
+
+.github-repo-button:hover,
+.github-repo-button:focus-visible {
+    background: #3a3f45;
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 8px 20px
+            rgba(
+                0,
+                0,
+                0,
+                0.24
+            );
+
+    outline: none;
 }
 
-@media (max-width: 650px) {
-    .discord-invite {
-        padding: 30px 22px;
+
+.discord-join-button:active,
+.github-repo-button:active {
+    transform:
+        translateY(0);
+}
+
+
+@media (max-width: 760px) {
+
+    .social-embed-grid {
+        grid-template-columns:
+            1fr;
     }
 
-    .discord-server-icon {
+}
+
+
+@media (max-width: 650px) {
+
+    .discord-invite,
+    .github-invite {
+        padding:
+            30px
+            22px;
+    }
+
+    .discord-server-icon,
+    .github-repo-icon {
         width: 72px;
         height: 72px;
     }
+
+    .github-repo-icon svg {
+        width: 44px;
+        height: 44px;
+    }
+
 }
 
 
