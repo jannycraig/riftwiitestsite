@@ -8,6 +8,16 @@ Contributor
 jackw.png
 mc
 
+# MidyGamy
+Contributor
+95078425.png
+mc
+
+# DDinghoya
+Contributor
+19677686.png
+mc
+
 # Ｄｉａ！♪～☆
 Website
 dia.png
