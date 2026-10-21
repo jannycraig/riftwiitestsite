@@ -1,3 +1,10 @@
+/* SPDX-FileCopyrightText: 2026 RiftWii contributors */
+/* SPDX-License-Identifier: GPL-3.0-or-later */
+img {
+    -webkit-user-drag: none;
+    user-select: none;
+}
+
 @font-face {
     font-family: "Rounded";
     src: url("../resources/fonts/rounded.ttf") format("truetype");
@@ -1342,15 +1349,21 @@ body:not(.loaded) .reveal-box {
 
 .release-grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr;
     gap: 18px;
     margin-top: 26px;
+}
+
+.release-grid-single {
+    width: min(620px, 100%);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .release-card {
     position: relative;
     min-width: 0;
-    padding: 24px;
+    padding: 28px;
     border: 1px solid rgba(127, 205, 255, 0.20);
     border-radius: 18px;
     background:
@@ -1361,19 +1374,13 @@ body:not(.loaded) .reveal-box {
         );
     box-shadow:
         inset 0 1px 0 rgba(255, 255, 255, 0.05),
+        0 0 28px rgba(75, 218, 255, 0.05),
         0 12px 28px rgba(0, 0, 20, 0.12);
+    text-align: center;
 }
 
-.stable-release {
-    box-shadow:
-        inset 0 1px 0 rgba(255, 255, 255, 0.05),
-        0 0 28px rgba(75, 218, 255, 0.05);
-}
-
-.prerelease-release {
-    box-shadow:
-        inset 0 1px 0 rgba(255, 255, 255, 0.05),
-        0 0 28px rgba(170, 82, 255, 0.06);
+.latest-release {
+    width: 100%;
 }
 
 .release-type {
@@ -1384,18 +1391,17 @@ body:not(.loaded) .reveal-box {
     letter-spacing: 0.22em;
 }
 
-.prerelease-release .release-type {
-    color: #c18cff;
-}
-
 .release-card h3 {
     margin: 0 0 12px;
     color: #f5fbff;
-    font-size: clamp(1.15rem, 2vw, 1.5rem);
+    font-size: clamp(1.35rem, 2.2vw, 1.7rem);
 }
 
 .release-card p {
-    min-height: 5.2em;
+    min-height: 0;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .release-button {
@@ -1408,12 +1414,8 @@ body:not(.loaded) .reveal-box {
 }
 
 @media (max-width: 760px) {
-    .release-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .release-card p {
-        min-height: 0;
+    .release-grid-single {
+        width: 100%;
     }
 }
 
@@ -3317,3 +3319,189 @@ body.reduced-motion .tutorial-list {
     }
 }
 
+.credits-notice {
+    width: 100%;
+
+    margin:
+        26px
+        0
+        0;
+
+    padding:
+        24px;
+
+    border:
+        1px solid
+        rgba(
+            127,
+            205,
+            255,
+            0.20
+        );
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(
+                23,
+                50,
+                107,
+                0.46
+            ),
+            rgba(
+                55,
+                20,
+                105,
+                0.42
+            )
+        );
+
+    box-shadow:
+        inset
+        0
+        1px
+        0
+        rgba(
+            255,
+            255,
+            255,
+            0.05
+        ),
+        0
+        0
+        28px
+        rgba(
+            75,
+            218,
+            255,
+            0.05
+        );
+}
+
+#credits .content-box .credits-notice {
+    margin-top: 26px;
+    color:
+        rgba(
+            217,
+            229,
+            255,
+            0.78
+        );
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    line-height: 1.7;
+
+    font-size: 0.98rem;
+}
+
+.credits-notice a {
+    width: 100%;
+
+    min-height: 46px;
+
+    margin-top: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding:
+        11px
+        16px;
+
+    border:
+        1px solid
+        rgba(
+            98,
+            217,
+            255,
+            0.25
+        );
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(
+                59,
+                211,
+                255,
+                0.13
+            ),
+            rgba(
+                154,
+                79,
+                255,
+                0.16
+            )
+        );
+
+    color: #eafdff;
+
+    font-family:
+        "Rounded",
+        sans-serif;
+
+    font-weight: 600;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    transition:
+        transform
+        0.25s
+        ease,
+        box-shadow
+        0.25s
+        ease,
+        border-color
+        0.25s
+        ease;
+}
+
+.credits-notice a:hover,
+.credits-notice a:focus-visible {
+    transform:
+        translateY(
+            -2px
+        );
+
+    border-color:
+        rgba(
+            126,
+            229,
+            255,
+            0.52
+        );
+
+    box-shadow:
+        0
+        0
+        18px
+        rgba(
+            70,
+            215,
+            255,
+            0.12
+        ),
+        0
+        0
+        28px
+        rgba(
+            157,
+            76,
+            255,
+            0.08
+        );
+
+    outline: none;
+}

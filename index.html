@@ -1,10 +1,12 @@
+<!-- SPDX-FileCopyrightText: 2026 RiftWii contributors -->
+<!-- SPDX-License-Identifier: GPL-3.0-or-later -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RiftWii</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=20261016-3">
 
     <meta property="og:title" content="RiftWii">
 
@@ -218,8 +220,6 @@
                                     <div class="tutorial-sort-menu-inner">
                                         <button type="button" data-sort="az" role="menuitem">A–Z</button>
                                         <button type="button" data-sort="za" role="menuitem">Z–A</button>
-                                        <button type="button" data-sort="date-asc" role="menuitem">Date written ↑</button>
-                                        <button type="button" data-sort="date-desc" role="menuitem">Date written ↓</button>
                                     </div>
                                 </div>
                             </div>
@@ -258,45 +258,25 @@
 
                     <span class="box-kicker">DOWNLOAD</span>
                     <img class="placeholder-image" src="resources/img/banner.png" alt="banner">
-                    <h2>Choose your RiftWii release</h2>
-                    <p class="download-intro">
-                        Choose your version of RiftWii from the Github:
-                    </p>
+
 
                     <div class="release-grid">
                         <div class="release-card stable-release">
-                            <span class="release-type">LATEST STABLE</span>
-                            <h3 id="stableVersion">Checking latest release...</h3>
-                            <p>
-                                The latest stable release of RiftWii. Doesn't have all the features, but is the best for compatibility. Reccomended for users.
-                            </p>
-                            <a
-                                class="download-button release-button"
-                                id="stableReleaseLink"
-                                href="https://github.com/KakarottoCake/Riftwii/releases/latest"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                Latest Stable
-                            </a>
+                            <span class="release-type">LATEST VERSION</span>
+<h3 id="latestVersion">Checking latest release...</h3>
+
+<a
+    class="download-button release-button"
+    id="latestReleaseLink"
+    href="https://github.com/KakarottoCake/Riftwii/releases/latest"
+    target="_blank"
+    rel="noopener noreferrer"
+>
+    Download Latest Release
+</a>
                         </div>
 
-                        <div class="release-card prerelease-release">
-                            <span class="release-type">LATEST PRERELEASE</span>
-                            <h3 id="prereleaseVersion">Checking latest prerelease...</h3>
-                            <p>
-                                The latest beta release of RiftWii. Has more experimental features for testing, however it might be unstable. Reccomended for testers.
-                            </p>
-                            <a
-                                class="download-button release-button"
-                                id="prereleaseReleaseLink"
-                                href="https://github.com/KakarottoCake/Riftwii/releases"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                Latest Prerelease
-                            </a>
-                        </div>
+
                     </div>
                 </article>
             </div>
@@ -360,7 +340,7 @@
                     <div class="discord-server-icon">
 
                         <img
-                            src="resources/img/61133727.png"
+                            src="resources/img/kakarottocake.png"
                             alt="GitHub logo"
                         >
 
@@ -422,7 +402,17 @@
             >
                 Show more
             </button>
-
+<p class="credits-notice">
+    RiftWii also uses third-party code and libraries.
+    Their authors and licenses are listed in:
+    <a
+        href="https://github.com/KakarottoCake/Riftwii/blob/main/NOTICE.md"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        FULL CREDITS
+    </a>.
+</p>
         </article>
     </div>
 </section>
@@ -449,5 +439,5 @@
     </div>
 </footer>
 
-    <script src="java/script.js"></script></body>
+    <script src="java/script.js?v=20261016-6"></script></body>
 </html>
